@@ -1,27 +1,8 @@
-import json
-import time
-
-body = {
-    'a': 1,
-    'c': {
-        'd': 4,
-        'f': 6,
-        'g': {
-            'z': 6,
-            'y': {
-                'c': 4,
-                'a': 5
-            }
-        },
-        'e': 5,
-    },
-    'b': 2,
-}
-
-
-print(body)
-
-
+"""
+嵌套字典排序:
+    利用迭代处理, 在不知如何迭代的情况下, 先手动实现三重嵌套字典的排序,
+    再寻找规律, 完成多重嵌套字典的排序
+"""
 
 def iterative_sort_test(v):
     """三重嵌套字典排序: 为了找规律"""
@@ -69,6 +50,26 @@ def iterative_sort(value):
 
 
 # body2 = iterative_sort_test({'body': body})
-body2 = iterative_sort(body)
 
-print(body2)
+
+if __name__ == '__main__':
+    body = {
+        'a': 1,
+        'c': {
+            'd': 4,
+            'f': 6,
+            'g': {
+                'z': 6,
+                'y': {
+                    'c': 4,
+                    'a': 5
+                }
+            },
+            'e': 5,
+        },
+        'b': 2,
+    }
+
+    print(body)
+    body2 = iterative_sort(body)
+    print(body2)
